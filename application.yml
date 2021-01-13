@@ -17,7 +17,7 @@ server:
 spring:
   profiles: verb
   application:
-    name: lab-4-verb
+    name: LAB-4-VERB
 words: ran,knew,had,saw,bought
 server:
   port: 8013
@@ -26,7 +26,7 @@ server:
 spring:
   profiles: article
   application:
-    name: lab-4-article
+    name: LAB-4-ARTICLE
 words: a,the
 server:
   port: 8014
@@ -35,7 +35,7 @@ server:
 spring:
   profiles: adjective
   application:
-    name: lab-4-adjective
+    name: LAB-4-ADJECTIVE
 words: reasonable,leaky,suspicious,ordinary,unlikely
 server:
   port: 8015
@@ -44,7 +44,7 @@ server:
 spring:
   profiles: noun
   application:
-    name: lab-4-noun
+    name: LAB-4-NOUN
 words: boat,book,vote,seat,backpack,partition,groundhog
 server:
   port: 8016
