@@ -7,7 +7,7 @@ eureka:
 spring:
   profiles: subject
   application:
-    name: LAB-4-SUBJECT
+    name: lab-4
 words: I,You,He,She,It
 server:
   port: 8012
