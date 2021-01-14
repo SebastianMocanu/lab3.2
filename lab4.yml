@@ -1,0 +1,58 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:8017/eureka}
+    registerWithEureka: true
+    #    fetchRegistry: true
+    should-unregister-on-shutdown: true
+  instance:
+    nonSecurePort: 7000
+    preferIpAddress: true
+    leaseRenewalIntervalInSeconds: 10
+    leaseExpirationDurationInSeconds: 20
+
+---
+spring:
+  profiles: subject
+  application:
+    name: lab-4
+words: I,You,He,She,It
+server:
+  port: 8012
+
+
+---
+spring:
+  profiles: verb
+  application:
+    name: LAB-4-VERB
+words: ran,knew,had,saw,bought
+server:
+  port: 8013
+
+---
+spring:
+  profiles: article
+  application:
+    name: LAB-4-ARTICLE
+words: a,the
+server:
+  port: 8014
+
+---
+spring:
+  profiles: adjective
+  application:
+    name: LAB-4-ADJECTIVE
+words: reasonable,leaky,suspicious,ordinary,unlikely
+server:
+  port: 8015
+
+---
+spring:
+  profiles: noun
+  application:
+    name: LAB-4-NOUN
+words: boat,book,vote,seat,backpack,partition,groundhog
+server:
+  port: 8016
