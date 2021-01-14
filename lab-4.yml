@@ -8,18 +8,6 @@ spring:
 words: I,You,He,She,It
 server:
   port: 8022
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: ${EUREKA_URI:http://localhost:8017/eureka}
-    registerWithEureka: true
-    #    fetchRegistry: true
-    should-unregister-on-shutdown: true
-  instance:
-    nonSecurePort: 7000
-    preferIpAddress: true
-    leaseRenewalIntervalInSeconds: 10
-    leaseExpirationDurationInSeconds: 20
 
 ---
 spring:
@@ -56,3 +44,17 @@ spring:
 words: boat,book,vote,seat,backpack,partition,groundhog
 server:
   port: 8016
+  
+---
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:8017/eureka}
+    registerWithEureka: true
+    #    fetchRegistry: true
+    should-unregister-on-shutdown: true
+  instance:
+    nonSecurePort: 7000
+    preferIpAddress: true
+    leaseRenewalIntervalInSeconds: 10
+    leaseExpirationDurationInSeconds: 20
