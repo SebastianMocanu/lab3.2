@@ -5,7 +5,7 @@ spring:
     name: subject
 words: I,You,He,She,It
 server:
-  port: 8022
+  port: 8012
 
 ---
 spring:
