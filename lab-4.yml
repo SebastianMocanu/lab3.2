@@ -1,3 +1,13 @@
+
+
+---
+spring:
+  profiles: subject
+  application:
+    name: lab-4
+words: I,You,He,She,It
+server:
+  port: 8022
 eureka:
   client:
     serviceUrl:
@@ -10,16 +20,6 @@ eureka:
     preferIpAddress: true
     leaseRenewalIntervalInSeconds: 10
     leaseExpirationDurationInSeconds: 20
-
----
-spring:
-  profiles: subject
-  application:
-    name: lab-4
-words: I,You,He,She,It
-server:
-  port: 8022
-
 
 ---
 spring:
