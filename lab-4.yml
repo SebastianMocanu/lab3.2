@@ -48,7 +48,7 @@ server:
 eureka:
   client:
     serviceUrl:
-      defaultZone: ${EUREKA_URI:http://localhost:8017/eureka},${EUREKA_URI:http://eureka-secondary:8018/eureka/},${EUREKA_URI:http://eureka-secondary:8019/eureka/}
+      defaultZone: ${EUREKA_URI:http://localhost:8017/eureka},${EUREKA_URI:http://localhost:8018/eureka/},${EUREKA_URI:http://localhost:8019/eureka/}
     registerWithEureka: true
     #    fetchRegistry: true
     should-unregister-on-shutdown: true
