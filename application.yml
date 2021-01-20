@@ -130,7 +130,7 @@ spring:
   application:
     name: lab-9-gateway
 server:
-  port: 8010
+  port: 8080
 eureka:
   client:
     serviceUrl:
