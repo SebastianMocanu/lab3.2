@@ -124,3 +124,22 @@ eureka:
     leaseRenewalIntervalInSeconds: 10
     leaseExpirationDurationInSeconds: 20
 
+---
+spring:
+  profiles: default
+  application:
+    name: lab-9-gateway
+server:
+  port: 8010
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://eureka-primary:8017/eureka},${EUREKA_URI:http://eureka-secondary:8018/eureka/},${EUREKA_URI:http://eureka-tertiary:8019/eureka/}
+    registerWithEureka: true
+    #    fetchRegistry: true
+    should-unregister-on-shutdown: true
+  instance:
+    instanceId: ${spring.cloud.client.hostname}:${spring.application.name}:${spring.application.instance_id:${random.value}}
+    preferIpAddress: true
+    leaseRenewalIntervalInSeconds: 10
+    leaseExpirationDurationInSeconds: 20
